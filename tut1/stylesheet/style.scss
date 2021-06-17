@@ -1,0 +1,42 @@
+@import 'reset';
+@import 'variables';
+
+/* template to use many times inside styling */
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+.first {
+    color: $primary-color;
+    /* choose one o f the variables in the specified structure */
+    font-weight: map-get($font-weights, bold)
+}
+
+.second {
+    color: $secondary-color;
+    font-weight: weight(bold);
+}
+
+.container {
+    width: calc(100% - 100px);
+    @include flex();
+    border: 1px black solid;
+    margin: 0 auto;
+
+    ul {
+        list-style: none;
+        width: 200px;
+        /* copy whoel style from class to current */
+        @extend .container;
+
+        li {
+            text-decoration: underline;
+        }
+    }
+}

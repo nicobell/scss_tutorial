@@ -1,0 +1,14 @@
+@import "variables";
+
+.sign-up {
+    border: 2px solid $primary-color;
+    border-radius: 20px;
+    padding: .4em;
+    transition: all .3s linear;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $secondary-color;
+        color: $primary-color;
+    }
+}

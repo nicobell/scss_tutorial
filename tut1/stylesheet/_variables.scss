@@ -1,0 +1,10 @@
+$primary-color: gray;
+$secondary-color: black;
+
+
+/* variable with multiple choices */
+$font-weights: (
+    'regular': 400,
+    'medium': 500,
+    'bold': 700
+);
